@@ -160,6 +160,25 @@ public:
         insert_(element, &before);
     }
 
+    //! Insert element into list.
+    //!
+    //! @remarks
+    //!  - inserts @p element after @p after
+    //!  - acquires ownership of @p element
+    //!
+    //! @pre
+    //!  @p element should not be member of any list.
+    //!  @p after should be member of this list.
+    void insert_after(T& element, T& after) {
+        insert_(element, &after);
+    }
+
+
+
+
+
+
+
     //! Remove element from list.
     //!
     //! @remarks
